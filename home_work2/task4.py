@@ -9,4 +9,4 @@ arr = string.split()
 line = 0
 for word in arr:
     line += 1
-    print(line, word[:11])
+    print(line, word[:10])
