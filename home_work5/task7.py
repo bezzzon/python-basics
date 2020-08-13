@@ -32,15 +32,15 @@ with open('task7.txt', 'r', encoding='utf-8') as f:
     sum_profit = 0
     i = 0
     for line in f:
-        i += 1
         profit = get_profit(line)
         name = get_company_name(line)
         if profit >= 0:
+            i += 1
             sum_profit += get_profit(line)
         result[0][name] = profit
     result[1]['average_profit'] = sum_profit / i
 
-with open('task7_result.txt', 'w', encoding='utf-8') as f:
+with open('task7_result.json', 'w', encoding='utf-8') as f:
     json.dump(result, f)
 
 print('Conversion completed')
